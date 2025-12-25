@@ -94,9 +94,6 @@ const Index = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-2 -right-2 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                  Trusted Advisor
-                </div>
               </div>
             </div>
           </div>
