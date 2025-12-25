@@ -68,7 +68,7 @@ const Navbar = () => {
           {/* Profile and CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+919876543210"
+              href="tel:+919035905406"
               className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
             >
               <Phone className="w-4 h-4" />
@@ -113,7 +113,7 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="tel:+919876543210"
+              href="tel:+919035905406"
               className="flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-lg font-medium mt-2"
             >
               <Phone className="w-4 h-4" />
