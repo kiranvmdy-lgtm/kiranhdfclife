@@ -125,11 +125,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <a
-                      href="mailto:kiran@hdfclife.com"
+                <a
+                      href="mailto:kiran.v@hdfclife.com"
                       className="text-primary hover:underline"
                     >
-                      kiran@hdfclife.com
+                      kiran.v@hdfclife.com
                     </a>
                   </div>
                 </div>
