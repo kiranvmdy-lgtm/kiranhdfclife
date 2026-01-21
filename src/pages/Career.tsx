@@ -11,9 +11,63 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
 import slidePartnership from "@/assets/slide-partnership.jpg";
 
 const Career = () => {
+  const careerSlides = [
+    {
+      image: "/photo image career/1.png",
+      title: "Join Our Winning Team",
+      subtitle: "Build a successful career with HDFC Life",
+    },
+    {
+      image: "/photo image career/2.png",
+      title: "Unlimited Earning Potential",
+      subtitle: "Your growth has no limits here",
+    },
+    {
+      image: "/photo image career/3.png",
+      title: "Professional Training",
+      subtitle: "Learn from industry experts",
+    },
+    {
+      image: "/photo image career/4.png",
+      title: "Work-Life Balance",
+      subtitle: "Flexible hours, your rules",
+    },
+    {
+      image: "/photo image career/5.png",
+      title: "Recognition & Rewards",
+      subtitle: "Your efforts are always celebrated",
+    },
+    {
+      image: "/photo image career/6.png",
+      title: "Growing Community",
+      subtitle: "Join a family of successful advisors",
+    },
+    {
+      image: "/photo image career/7.png",
+      title: "Leadership Opportunities",
+      subtitle: "Grow into managerial roles",
+    },
+    {
+      image: "/photo image career/8.png",
+      title: "Financial Freedom",
+      subtitle: "Achieve your financial goals",
+    },
+    {
+      image: "/photo image career/9.png",
+      title: "Make a Difference",
+      subtitle: "Help families secure their future",
+    },
+    {
+      image: "/photo image career/10.png",
+      title: "Start Your Journey Today",
+      subtitle: "The best time to begin is now",
+    },
+  ];
+
   const businessPartnerAudience = [
     "Freelancers",
     "Businessmen & Women",
@@ -88,6 +142,21 @@ const Career = () => {
             Join India's leading life insurance company and unlock unlimited
             earning potential while helping families secure their future.
           </p>
+        </div>
+      </section>
+
+      {/* Career Image Carousel */}
+      <section className="section-padding bg-muted">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+              Life at HDFC Life
+            </span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-4">
+              Glimpses of Our Journey
+            </h2>
+          </div>
+          <ImageCarousel slides={careerSlides} />
         </div>
       </section>
 

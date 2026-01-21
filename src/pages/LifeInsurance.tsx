@@ -222,10 +222,10 @@ const LifeInsurance = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/products"
+              to="/insurance-plans"
               className="px-8 py-4 bg-background text-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2"
             >
-              View All Products
+              View All Insurance Plans
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link to="/contact" className="btn-outline-hero">

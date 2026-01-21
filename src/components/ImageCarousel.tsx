@@ -63,17 +63,17 @@ const ImageCarousel = ({
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-background/20 backdrop-blur-sm text-primary-foreground hover:bg-background/40 transition-all duration-300"
+        className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 p-3 md:p-4 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 hover:scale-110 active:scale-95 transition-all duration-300 z-10 group"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-6 h-6 md:w-7 md:h-7 group-hover:-translate-x-0.5 transition-transform duration-200" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-background/20 backdrop-blur-sm text-primary-foreground hover:bg-background/40 transition-all duration-300"
+        className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 p-3 md:p-4 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 hover:scale-110 active:scale-95 transition-all duration-300 z-10 group"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-6 h-6 md:w-7 md:h-7 group-hover:translate-x-0.5 transition-transform duration-200" />
       </button>
 
       {/* Dots Indicator */}

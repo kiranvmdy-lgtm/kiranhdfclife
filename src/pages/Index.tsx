@@ -10,28 +10,36 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
+import PopupCTA from "@/components/PopupCTA";
 import kiranPhoto from "@/assets/kiran-photo.jpg";
-import heroFamily from "@/assets/hero-family.jpg";
-import slideRetirement from "@/assets/slide-retirement.jpg";
-import slideEducation from "@/assets/slide-education.jpg";
 import slidePartnership from "@/assets/slide-partnership.jpg";
 
 const Index = () => {
   const heroSlides = [
     {
-      image: heroFamily,
-      title: "Protect What Matters Most",
-      subtitle: "Comprehensive life insurance solutions for your family's future",
+      image: "/Term Insurance Plan.png",
+      title: "Term Insurance Plan",
+      subtitle: "Secure your family's future with affordable term life coverage",
     },
     {
-      image: slideRetirement,
-      title: "Secure Your Retirement",
-      subtitle: "Plan today for a worry-free tomorrow with HDFC Life",
+      image: "/Childrens Insurance Plan.png",
+      title: "Children's Insurance Plan",
+      subtitle: "Invest in your child's dreams and secure their bright future",
     },
     {
-      image: slideEducation,
-      title: "Invest in Dreams",
-      subtitle: "Education plans that secure your child's bright future",
+      image: "/Pension Retirement Insurance Plan.png",
+      title: "Pension & Retirement Plan",
+      subtitle: "Plan today for a worry-free and comfortable retirement",
+    },
+    {
+      image: "/Savings Plan.png",
+      title: "Savings Plan",
+      subtitle: "Build wealth systematically with guaranteed savings plans",
+    },
+    {
+      image: "/ULIP Insurance PLan.png",
+      title: "ULIP Insurance Plan",
+      subtitle: "Combine insurance protection with market-linked investment returns",
     },
   ];
 
@@ -103,6 +111,42 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
           <ImageCarousel slides={heroSlides} />
         </div>
+
+        {/* CTA Lead Form */}
+        <div className="max-w-7xl mx-auto px-4 md:px-8 pb-12">
+          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 md:p-10 shadow-2xl">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+              <div className="text-center lg:text-left">
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-primary-foreground mb-2">
+                  Get Free Insurance Consultation
+                </h3>
+                <p className="text-primary-foreground/90 text-sm md:text-base">
+                  Leave your details and our expert will call you back
+                </p>
+              </div>
+              <form className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="px-5 py-3.5 rounded-lg bg-white/95 text-foreground placeholder:text-muted-foreground w-full sm:w-48 focus:outline-none focus:ring-2 focus:ring-accent shadow-md"
+                  required
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="px-5 py-3.5 rounded-lg bg-white/95 text-foreground placeholder:text-muted-foreground w-full sm:w-48 focus:outline-none focus:ring-2 focus:ring-accent shadow-md"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="px-8 py-3.5 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg whitespace-nowrap"
+                >
+                  Get a Call Back
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* About HDFC Life Section */}
@@ -131,10 +175,10 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link
-                  to="/life-insurance"
+                  to="/insurance-plans"
                   className="btn-hero flex items-center gap-2"
                 >
-                  Explore Products
+                  Explore Insurance Plans
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
@@ -222,8 +266,8 @@ const Index = () => {
             today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/products" className="btn-hero flex items-center gap-2">
-              View Products
+            <Link to="/insurance-plans" className="btn-hero flex items-center gap-2">
+              View Insurance Plans
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
@@ -238,6 +282,7 @@ const Index = () => {
       </section>
 
       <Footer />
+      <PopupCTA delaySeconds={5} />
     </div>
   );
 };

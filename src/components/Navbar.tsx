@@ -18,19 +18,21 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Life Insurance", path: "/life-insurance" },
-    { name: "Products", path: "/products" },
+    { name: "HDFC Life", path: "/about-hdfc-life" },
+    { name: "Why Insurance", path: "/why-life-insurance" },
+    { name: "Why Us", path: "/how-we-differ" },
+    { name: "Insurance Plans", path: "/insurance-plans" },
+    { name: "News", path: "/insurance-news" },
     { name: "Career", path: "/career" },
     { name: "Contact", path: "/contact" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-background/95 backdrop-blur-md shadow-lg"
+        : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
@@ -52,13 +54,11 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative font-medium transition-colors duration-300 hover:text-primary ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-foreground"
-                } after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left ${
-                  location.pathname === link.path ? "after:scale-x-100" : ""
-                }`}
+                className={`relative font-medium transition-colors duration-300 hover:text-primary ${location.pathname === link.path
+                  ? "text-primary"
+                  : "text-foreground"
+                  } after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left ${location.pathname === link.path ? "after:scale-x-100" : ""
+                  }`}
               >
                 {link.name}
               </Link>
@@ -93,9 +93,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-96 pb-6" : "max-h-0"
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 pb-6" : "max-h-0"
+            }`}
         >
           <div className="flex flex-col gap-4 pt-4 border-t border-border">
             {navLinks.map((link) => (
@@ -103,11 +102,10 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`font-medium transition-colors ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
-                }`}
+                className={`font-medium transition-colors ${location.pathname === link.path
+                  ? "text-primary"
+                  : "text-foreground hover:text-primary"
+                  }`}
               >
                 {link.name}
               </Link>
