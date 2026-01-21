@@ -94,23 +94,24 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 }
 
 @layer components {
   .btn-hero {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg 
-           transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 
-           active:translate-y-0 border-0;
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 border-0;
     background: var(--gradient-hero);
   }
 
   .btn-outline-hero {
-    @apply bg-transparent border-2 border-primary-foreground/30 text-primary-foreground 
-           px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 
-           hover:bg-primary-foreground/10 hover:border-primary-foreground/50;
+    @apply bg-transparent border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-primary-foreground/10 hover:border-primary-foreground/50;
   }
 
   .card-elevated {
@@ -155,6 +156,10 @@
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
+
+  .animate-bounce-subtle {
+    animation: bounceSubtle 2s ease-in-out infinite;
+  }
 }
 
 @keyframes fadeUp {
@@ -162,6 +167,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -172,6 +178,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -182,6 +189,7 @@
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -189,9 +197,12 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -202,6 +213,7 @@
     opacity: 0;
     transform: scale(0.9) translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -210,4 +222,16 @@
 
 .animate-scale-in {
   animation: scaleIn 0.3s ease-out forwards;
+}
+
+@keyframes bounceSubtle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
